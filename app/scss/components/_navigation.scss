@@ -1,0 +1,76 @@
+.navigation {
+  margin-bottom: 50px;
+  &--footer {
+    margin-bottom: 0;
+    mix-blend-mode: luminosity;
+  }
+
+  &__inner,
+  &__list {
+    align-items: center;
+    display: flex;
+  }
+
+  &__inner {
+    padding: 24px 0;
+    border-bottom: 2px solid rgba($black100, .08);
+    gap: 20px;
+
+    &--top {
+      border-bottom: none;
+      border-top: 1px solid rgba($black100, .08);
+    }
+  }
+
+  &__nav {
+    @include r($lg) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @include r($tablet) {
+      display: none;
+    }
+  }
+
+  &__list {
+    margin-left: 80px;
+    display: flex;
+    gap: 24px;
+    @include r($lg) {
+      margin-left: 0;
+    }
+  }
+
+  &__link {
+    border-bottom: 1px solid transparent;
+    position: relative;
+    padding-bottom: 2px;
+    transition: color .4s, border .4s;
+
+    &::before {
+      @include pseudo;
+      left: 0;
+      bottom: 0;
+      background-color: $accent;
+      width: 0;
+      height: 1px;
+      transition: width .4s;
+    }
+
+    &:hover {
+      color: $accent;
+
+      &::before {
+        width: 100%;
+      }
+    }
+
+    &:focus {
+      color: $accent;
+    }
+  }
+
+  &__btn {
+    margin-left: auto;
+  }
+}

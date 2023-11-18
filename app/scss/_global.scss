@@ -1,0 +1,199 @@
+.body {
+  font-family: $sfpro;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: $mid-gray;
+  background-color: $white;
+  position: relative;
+  overflow-x: hidden;
+  @include r($phone) {
+    font-size: 14px;
+  }
+
+  &--active {
+    overflow: hidden;
+  }
+}
+
+.page-title,
+.section-title {
+  line-height: 1.1;
+  color: $black;
+}
+
+.page-title {
+  font-weight: 700;
+  letter-spacing: -1.68px;
+  font-size: 48px;
+  margin: 0 auto 25px;
+  @media (max-width: 1300px) {
+    font-size: 44px;
+  }
+  @include r($desktop) {
+    font-size: 42px;
+  }
+  @include r($lg) {
+    font-size: 38px;
+    margin-bottom: 15px;
+  }
+  @include r($tablet) {
+    font-size: 36px;
+  }
+  @include r($sm) {
+    font-size: 34px;
+  }
+  @include r($phone) {
+    font-size: 32px;
+  }
+}
+
+.section-title {
+  text-align: center;
+  font-family: $inter;
+  font-size: 32px;
+  letter-spacing: -1.12px;
+  font-weight: 600;
+  margin-bottom: 32px;
+  @include r($lg) {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+  @include r($tablet) {
+    font-size: 28px;
+    letter-spacing: -1.12px;
+  }
+  @include r($sm) {
+    font-size: 26px;
+  }
+  @include r($phone) {
+    font-size: 24px;
+  }
+}
+
+.container {
+  max-width: 1280px;
+  padding: 0 15px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.indent {
+  margin-top: 128px;
+  @include r($desktop) {
+    margin-top: 110px;
+  }
+  @include r($lg) {
+    margin-top: 95px;
+  }
+  @include r($tablet) {
+    margin-top: 80px;
+  }
+  @include r($sm) {
+    margin-top: 65px;
+  }
+  @include r($phone) {
+    margin-top: 62px;
+  }
+}
+
+.logo {
+  transition: opacity .3s, outline .3s;
+  border-radius: 3px;
+
+  &:hover {
+    opacity: .5;
+  }
+
+  &:focus {
+    outline: 2px solid $accent;
+  }
+
+  &__img {
+    @include objectCoverBg;
+    object-fit: contain;
+    @include r($sm) {
+      width: 150px;
+    }
+    @include r($phone) {
+      width: 138px;
+      height: 24px;
+    }
+  }
+}
+
+.btn {
+  display: inline-block;
+  line-height: 1;
+  color: $black;
+  font-weight: 600;
+  font-family: $inter;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid rgba($black, .16);
+  transition: color .4s, background-color .4s, opacity .4s, border .4s;
+
+  &:hover {
+    color: $accent;
+    border-color: $accent;
+  }
+
+  &:focus {
+    color: $accent;
+  }
+
+  &--blue {
+    background-color: $accent;
+    color: $white;
+    border-color: transparent;
+    box-shadow: 0 -4px 19px 0px rgba(255, 255, 255, 0.25) inset;
+
+    &:hover {
+      background-color: $primary-blue;
+      border-color: $accent;
+      color: $white;
+    }
+
+    &:focus {
+      color: $white;
+    }
+
+    &:active {
+      background-color: $dark-blue;
+    }
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+svg, path {
+  transition: all .4s;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba($accent, 0.2);
+}
+
+::-webkit-scrollbar-thumb,
+::selection {
+  background-color: $accent;
+}
+
+::selection {
+  color: $black;
+}

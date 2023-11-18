@@ -1,0 +1,13 @@
+@import 'reset';
+@import 'fonts';
+@import 'vars';
+@import 'mixin';
+@import 'libs';
+@import 'global';
+
+@import 'components/navigation';
+
+@import 'home/start';
+@import 'home/benefits';
+@import 'home/reviews';
+@import 'home/certificados';

@@ -1,0 +1,85 @@
+.benefits {
+  &__list {
+    margin: 0 auto;
+    max-width: 1120px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    @include r($desktop) {
+      gap: 20px;
+    }
+    @media (max-width: 860px) {
+      gap: 15px;
+    }
+    @media (max-width: 830px) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    @include r($sm) {
+      gap: 25px;
+    }
+  }
+
+  &__item {
+    box-shadow: 0 6px 18px 0 rgba($black100, .08);
+    background-color: $white;
+    border-radius: 16px;
+    padding: 18px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    @media (max-width: 830px) {
+      width: 48%;
+      margin: 0 auto;
+    }
+    @include r($sm) {
+      width: 100%;
+    }
+    @include r($phone) {
+      padding: 16px 24px;
+    }
+  }
+
+  &__img {
+    @include bg;
+    margin: 0 auto 16px;
+  }
+
+  &__name {
+    color: $black;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 4px;
+    @include r($sm) {
+      font-size: 18px;
+    }
+    @include r($phone) {
+      font-size: 16px;
+    }
+  }
+
+  &__text {
+    line-height: 1.55;
+    max-width: 300px;
+    margin: 0 auto 16px;
+  }
+
+  &__link {
+    margin-top: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+
+    &:hover {
+      svg path {
+        fill: $accent;
+      }
+    }
+    &:focus {
+      color: inherit;
+      opacity: .4;
+    }
+  }
+}
