@@ -117,7 +117,7 @@
     }
     @include r($phone) {
       width: 138px;
-      height: 24px;
+      height: auto;
     }
   }
 }
@@ -179,6 +179,13 @@
 
 svg, path {
   transition: all .4s;
+}
+
+.fancybox__content>.f-button.is-close-btn {
+  opacity: 0 !important;
+  @include r($phone) {
+    opacity: 1 !important;
+  }
 }
 
 ::-webkit-scrollbar {

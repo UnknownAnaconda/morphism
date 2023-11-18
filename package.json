@@ -9,8 +9,6 @@
   "description": "build Vadim",
   "main": "index.js",
   "devDependencies": {
-    "@fancyapps/fancybox": "^3.5.7",
-    "air-datepicker": "^3.1.1",
     "browser-sync": "^2.27.7",
     "del": "^6.0.0",
     "global": "^4.4.0",

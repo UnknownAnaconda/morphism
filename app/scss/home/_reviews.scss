@@ -1,24 +1,137 @@
 .reviews {
   &__swiper {
-    display: flex;
-    align-items: center;
-    gap: 35px;
-    max-width: 1100px;
+    max-width: 930px;
+    margin: 0 auto;
+    position: relative;
+    @media (max-width: 1100px) {
+      max-width: 715px;
+    }
+    @media (max-width: 870px) {
+      max-width: 528px;
+    }
+    @media (max-width: 690px) {
+      max-width: 347px;
+    }
+    @media (max-width: 540px) {
+      max-width: 166px;
+    }
   }
 
   &__slide {
+    @include bg;
+    border-radius: 8px;
     height: 300px;
-    background-color: black;
+    display: flex;
+    position: relative;
+  }
+
+  &__video {
+    @include bg;
+    border-radius: 8px;
+  }
+
+  &__btn,
+  &__play {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    transition: background-color .4s;
+
+    &::before {
+      @include bg;
+      @include pseudo;
+      @include topLeft50;
+    }
   }
 
   &__btn {
-    border-radius: 50%;
+    @include top50;
+    left: -83px;
+    position: absolute;
+    z-index: 1000;
     border: 1px solid rgba($black, .16);
-    width: 48px;
-    height: 48px;
+    @include r($desktop) {
+      left: -60px;
+    }
+    @media (max-width: 870px) {
+      left: -80px;
+    }
+    @media (max-width: 770px) {
+      left: -65px;
+    }
+    @media (max-width: 540px) {
+      left: -75px;
+    }
+    @media (max-width: 360px) {
+      left: -65px;
+    }
+
+    &:hover {
+      background-color: rgba($black, .05);
+    }
+
+    &:active {
+      background-color: rgba($black, .1);
+    }
+
+    &::before {
+      width: 6px;
+      height: 12px;
+      background-image: url("../images/icons/prev-arrow.svg");
+    }
+
+    &--next {
+      left: auto;
+      right: -83px;
+      @include r($desktop) {
+        right: -60px;
+      }
+      @media (max-width: 1100px) {
+        right: -50px;
+      }
+      @media (max-width: 870px) {
+        right: -80px;
+      }
+      @media (max-width: 770px) {
+        right: -65px;
+      }
+      @media (max-width: 540px) {
+        right: -75px;
+      }
+      @media (max-width: 360px) {
+        right: -65px;
+      }
+
+      &::before {
+        background-image: url("../images/icons/next-arrow.svg");
+      }
+    }
   }
 
-  .swiper-android .swiper-slide, .swiper-ios .swiper-slide, .swiper-wrapper {
-    max-width: 900px;
+  &__play {
+    @include bg;
+    @include topLeft50;
+    background-size: cover;
+    position: absolute;
+    border: 2px solid $white;
+    background-color: rgba(#D9D9D9, .1);
+
+    &:hover {
+      background-color: rgba(#D9D9D9, .2);
+    }
+
+    &:active {
+      background-color: rgba(#D9D9D9, .3);
+    }
+
+    &::before {
+      width: 14px;
+      height: 18px;
+      background-image: url("../images/icons/play-video.svg");
+    }
+  }
+
+  .swiper {
+    position: static;
   }
 }

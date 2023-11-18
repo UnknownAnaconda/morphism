@@ -12,6 +12,7 @@
     <link rel="icon" href="images/icons/favicon.svg" type="images/x-icon">
     <link rel="shortcut icon" href="images/icons/favicon.svg" type="images/x-icon">
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
 </head>
 
 <body class="body">
@@ -28,10 +29,10 @@
                         <a class="navigation__link" href="">Cabecera del sitio</a>
                     </li>
                     <li>
-                        <a class="navigation__link" href="">Ventajas</a>
+                        <a class="navigation__link" href="#benefits">Ventajas</a>
                     </li>
                     <li>
-                        <a class="navigation__link" href="#community">Testimonios</a>
+                        <a class="navigation__link" href="#reviews">Testimonios</a>
                     </li>
                 </ul>
             </nav>
@@ -70,7 +71,7 @@
     <img class="start__img" src="images/start-illustration.svg" alt="Diego Jose" height="490">
     <img class="start__img--mobile" src="images/start-illustration-mobile.svg" alt="Diego Jose" height="auto">
 </section>
-    <section class="benefits indent">
+    <section class="benefits indent" id="benefits">
     <div class="container">
         <h2 class="section-title">Ventajas de nuestros servicios</h2>
         <ul class="benefits__list">
@@ -119,26 +120,62 @@
         </ul>
     </div>
 </section>
-    <section class="reviews indent">
+    <section class="reviews indent" id="reviews">
     <div class="container">
         <h2 class="section-title">Opiniones de nuestros participantes</h2>
-        <div class="reviews__swiper swiper">
-            <button class="reviews__btn reviews__btn--prev" type="button">
-                <span class="sr-only">Prev slide</span>
-            </button>
-            <div class="swiper-wrapper">
-                <div class="reviews__slide swiper-slide">Slide 1</div>
-                <div class="reviews__slide swiper-slide">Slide 1</div>
-                <div class="reviews__slide swiper-slide">Slide 1</div>
-                <div class="reviews__slide swiper-slide">Slide 1</div>
-                <div class="reviews__slide swiper-slide">Slide 1</div>
-                <div class="reviews__slide swiper-slide">Slide 1</div>
-                <div class="reviews__slide swiper-slide">Slide 1</div>
-                <div class="reviews__slide swiper-slide">Slide 1</div>
+        <div class="reviews__swiper">
+            <div class="swiper">
+                <button class="reviews__btn reviews__btn--prev" type="button">
+                    <span class="sr-only">Prev slide</span>
+                </button>
+                <div class="swiper-wrapper">
+                    <div class="reviews__slide swiper-slide" style="background-image: url('images/reviews/1.jpg')">
+                        <a class="reviews__play" data-fancybox="video-gallery"
+                           href="https://youtu.be/1znKcN1w7Fw?feature=shared">
+                            <span class="sr-only">Play video</span>
+                        </a>
+                    </div>
+                    <div class="reviews__slide swiper-slide" style="background-image: url('images/reviews/2.jpg')">
+                        <a class="reviews__play" data-fancybox="video-gallery"
+                           href="https://youtu.be/1znKcN1w7Fw?feature=shared">
+                            <span class="sr-only">Play video</span>
+                        </a>
+                    </div>
+                    <div class="reviews__slide swiper-slide" style="background-image: url('images/reviews/3.jpg')">
+                        <a class="reviews__play" data-fancybox="video-gallery"
+                           href="https://youtu.be/1znKcN1w7Fw?feature=shared">
+                            <span class="sr-only">Play video</span>
+                        </a>
+                    </div>
+                    <div class="reviews__slide swiper-slide" style="background-image: url('images/reviews/4.jpg')">
+                        <a class="reviews__play" data-fancybox="video-gallery"
+                           href="https://youtu.be/1znKcN1w7Fw?feature=shared">
+                            <span class="sr-only">Play video</span>
+                        </a>
+                    </div>
+                    <div class="reviews__slide swiper-slide" style="background-image: url('images/reviews/5.jpg')">
+                        <a class="reviews__play" data-fancybox="video-gallery"
+                           href="https://youtu.be/1znKcN1w7Fw?feature=shared">
+                            <span class="sr-only">Play video</span>
+                        </a>
+                    </div>
+                    <div class="reviews__slide swiper-slide" style="background-image: url('images/reviews/6.jpg')">
+                        <a class="reviews__play" data-fancybox="video-gallery"
+                           href="https://youtu.be/1znKcN1w7Fw?feature=shared">
+                            <span class="sr-only">Play video</span>
+                        </a>
+                    </div>
+                    <div class="reviews__slide swiper-slide" style="background-image: url('images/reviews/7.jpg')">
+                        <a class="reviews__play" data-fancybox="video-gallery"
+                           href="https://youtu.be/1znKcN1w7Fw?feature=shared">
+                            <span class="sr-only">Play video</span>
+                        </a>
+                    </div>
+                </div>
+                <button class="reviews__btn reviews__btn--next" type="button">
+                    <span class="sr-only">Next slide</span>
+                </button>
             </div>
-            <button class="reviews__btn reviews__btn--prev" type="button">
-                <span class="sr-only">Next slide</span>
-            </button>
         </div>
     </div>
 </section>
@@ -178,3 +215,4 @@
     </div>
 </footer>
 <script src="js/main.min.js" type="module" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
