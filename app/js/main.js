@@ -28,17 +28,54 @@ const swiper = new Swiper('.swiper', {
 
 Fancybox.bind('[data-fancybox="video-gallery"]', {});
 
-const sections = document.querySelectorAll('.my-section');
+gsap.registerPlugin(ScrollTrigger);
+const timeline = gsap.timeline({defaults: {duration: 0.8}});
+timeline.from(".header", {opacity: 0, y: -100});
+timeline.from(".start", {opacity: 0, y: 800});
 
-const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.intersectionRatio > 0.2) { // Установка порога на 20%
-            entry.target.classList.add('animate__fadeInUp');
-            observer.unobserve(entry.target);
-        }
-    });
-}, { threshold: 0.2 }); // Изменение порога на 20%
+const timelineBenefits = gsap.timeline({defaults: {duration: 0.6}});
+timelineBenefits.pause();
+timelineBenefits.from('.benefits', {opacity: 0, y: 530});
+ScrollTrigger.create({
+    trigger: '.benefits',
+    once: true,
+    onEnter: () => {
+        timelineBenefits.play();
+    },
+});
 
-sections.forEach(section => {
-    observer.observe(section);
+const timelineReviews = gsap.timeline({defaults: {duration: 0.8}});
+timelineReviews.pause();
+timelineBenefits.from('.reviews', {opacity: 0, y: 530});
+ScrollTrigger.create({
+    trigger: '.reviews',
+    start: 'top 170%',
+    once: true,
+    onEnter: () => {
+        timelineBenefits.play();
+    },
+});
+
+const timelineCertificados = gsap.timeline({defaults: {duration: 0.8}});
+timelineCertificados.pause();
+timelineCertificados.from('.certificados', {opacity: 0, y: 330});
+ScrollTrigger.create({
+    trigger: '.certificados',
+    start: 'top bottom',
+    once: true,
+    onEnter: () => {
+        timelineCertificados.play();
+    },
+});
+
+const timelineFooter = gsap.timeline({defaults: {duration: 0.4}});
+timelineFooter.pause();
+timelineFooter.from('.footer', {delay: 1, opacity: 0});
+ScrollTrigger.create({
+    trigger: '.footer',
+    start: 'top 170%',
+    once: true,
+    onEnter: () => {
+        timelineFooter.play();
+    },
 });
