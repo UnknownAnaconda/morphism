@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+          content="Limited Club здесь высокие показатели — не цель, а стандарт">
+    <meta http-equiv="cache-control" content="public, max-age=3600">
+    <title>Управление ссылками</title>
+    <link rel="icon" href="images/icons/favicon.svg" type="images/x-icon">
+    <link rel="shortcut icon" href="images/icons/favicon.svg" type="images/x-icon">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+
+<body class="body">
+
+<header class="navigation">
+    <div class="container">
+        <div class="navigation__inner">
+            <a class="logo" href="/">
+                <img class="logo__img" src="images/icons/logo.svg" alt="logo" width="170" height="30">
+            </a>
+            <nav class="navigation__nav">
+                <ul class="navigation__list">
+                    <li>
+                        <a class="navigation__link" href="">Cabecera del sitio</a>
+                    </li>
+                    <li>
+                        <a class="navigation__link" href="#benefits">Ventajas</a>
+                    </li>
+                    <li>
+                        <a class="navigation__link" href="#reviews">Testimonios</a>
+                    </li>
+                </ul>
+            </nav>
+            <a class="navigation__btn btn" id="headerbtn" href="">Únete a nosotros</a>
+        </div>
+    </div>
+</header>
+<main>
+    <section class="admin">
+        <div class="container">
+            <h2 class="admin__title">Управление ссылками</h2>
+            <form class="admin__form" id="linkForm">
+                <label class="label" for="newLink">Ваша новая ссылка</label>
+                <input class="field" type="text" id="newLink" name="newLink" placeholder="Введите ссылку" required>
+                <button class="admin__btn" type="submit" onclick="changeLinks()">Сохранить</button>
+            </form>
+        </div>
+    </section>
+</main>

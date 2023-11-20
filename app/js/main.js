@@ -27,3 +27,18 @@ const swiper = new Swiper('.swiper', {
 });
 
 Fancybox.bind('[data-fancybox="video-gallery"]', {});
+
+const sections = document.querySelectorAll('.my-section');
+
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.intersectionRatio > 0.2) { // Установка порога на 20%
+            entry.target.classList.add('animate__fadeInUp');
+            observer.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.2 }); // Изменение порога на 20%
+
+sections.forEach(section => {
+    observer.observe(section);
+});

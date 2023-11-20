@@ -1,0 +1,17 @@
+@include('components/_head.html', {
+title: 'Управление ссылками'
+})
+
+@include('components/_header.html')
+<main>
+    <section class="admin">
+        <div class="container">
+            <h2 class="admin__title">Управление ссылками</h2>
+            <form class="admin__form" id="linkForm">
+                <label class="label" for="newLink">Ваша новая ссылка</label>
+                <input class="field" type="text" id="newLink" name="newLink" placeholder="Введите ссылку" required>
+                <button class="admin__btn" type="submit" onclick="changeLinks()">Сохранить</button>
+            </form>
+        </div>
+    </section>
+</main>
